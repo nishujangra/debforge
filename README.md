@@ -49,15 +49,6 @@ chmod +x build-debforge.sh
 sudo dpkg -i debforge_1.0.0_all.deb
 ```
 
-### Option 3: Manual Installation
-
-```sh
-git clone https://github.com/nishujangra/debforge.git
-cd debforge
-chmod +x build-deb.sh
-sudo cp build-deb.sh /usr/local/bin/debforge
-```
-
 ### Verify Installation
 
 After installation, verify debforge is working:

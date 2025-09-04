@@ -36,6 +36,3 @@ Thumbs.db
 # Backup files
 *.bak
 *.backup
-
-# Scripts
-build-debforge.sh
