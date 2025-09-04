@@ -1,0 +1,41 @@
+
+# Build artifacts
+build/
+*.deb
+
+# Test files
+test.sh
+test-app
+test-app.c
+test-config.yaml
+test-guide.md
+
+# Compiled binaries
+*.o
+*.so
+*.a
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Backup files
+*.bak
+*.backup
+
+# Scripts
+build-debforge.sh

@@ -1,0 +1,31 @@
+#!/bin/bash
+
+set -e
+
+case "$1" in
+    remove|purge)
+        # Clean up man page
+        if [ -f /usr/local/share/man/man1/debforge.1 ]; then
+            rm -f /usr/local/share/man/man1/debforge.1
+        fi
+        
+        # Update man database if mandb is available
+        if command -v mandb >/dev/null 2>&1; then
+            mandb -q
+        fi
+        
+        # Clean up any remaining files
+        if [ -d /usr/share/debforge ]; then
+            rm -rf /usr/share/debforge
+        fi
+        ;;
+    upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
+        # Do nothing for these cases
+        ;;
+    *)
+        echo "postrm called with unknown argument \`$1'" >&2
+        exit 1
+        ;;
+esac
+
+exit 0

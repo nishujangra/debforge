@@ -1,0 +1,24 @@
+Package: debforge
+Version: 1.0.0
+Section: utils
+Priority: optional
+Architecture: all
+Depends: dpkg-dev, bash (>= 4.0)
+Recommends: gcc, build-essential
+Maintainer: Nishant <ndjangra1027@email.com>
+Homepage: https://github.com/nishujangra/debforge
+Description: debforge - friendly .deb package builder
+ A simple, user-friendly tool to create .deb packages from binaries.
+ It wraps dpkg-deb with sane defaults, clean flags, and colored logging.
+ .
+ Features:
+  * Build .deb packages with one command
+  * Named flags (-name, -version, -arch, -bin, -config)
+  * Auto-generates Debian folder structure
+  * Includes optional config file support
+  * Input validation and error handling
+  * Verbose mode for debugging
+  * Configurable maintainer information
+ .
+ This tool makes Debian packaging easier than ever, perfect for
+ developers who need to distribute their applications as .deb packages.

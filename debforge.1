@@ -1,0 +1,65 @@
+.TH DEBFORGE 1 "2024-01-01" "debforge 1.0.0" "User Commands"
+.SH NAME
+debforge \- Build .deb packages the easy way
+.SH SYNOPSIS
+.B debforge
+[\fIOPTIONS\fR] \fB-name\fR \fIname\fR \fB-version\fR \fIversion\fR \fB-arch\fR \fIarch\fR \fB-bin\fR \fIbinary\fR
+.SH DESCRIPTION
+\fBdebforge\fR is a simple, user-friendly tool to create .deb packages from binaries.
+It wraps dpkg-deb with sane defaults, clean flags, and colored logging — making
+Debian packaging easier than ever.
+.SH OPTIONS
+.TP
+\fB-name\fR \fIname\fR
+Package name (e.g., myapp)
+.TP
+\fB-version\fR \fIversion\fR
+Package version (e.g., 1.0.0)
+.TP
+\fB-arch\fR \fIarch\fR
+Architecture (amd64, arm64, armhf, i386, all)
+.TP
+\fB-bin\fR \fIbinary\fR
+Path to the binary file
+.TP
+\fB-config\fR \fIconfig\fR
+Path to config file (copied to /etc/<pkg_name>/config.yaml)
+.TP
+\fB-maintainer\fR \fIemail\fR
+Maintainer email (default: from DEBFORGE_MAINTAINER env var)
+.TP
+\fB-verbose\fR
+Enable verbose output
+.TP
+\fB-no-cleanup\fR
+Don't clean up build directory after success
+.TP
+\fB-h\fR, \fB--help\fR
+Show help message
+.SH ENVIRONMENT
+.TP
+\fBDEBFORGE_MAINTAINER\fR
+Default maintainer email
+.SH EXAMPLES
+.TP
+Basic usage:
+.B debforge -name myapp -version 1.0.0 -arch amd64 -bin ./myapp
+.TP
+With config file:
+.B debforge -name myapp -version 1.0.0 -arch amd64 -bin ./myapp -config ./config.yaml
+.TP
+Verbose mode:
+.B debforge -name myapp -version 1.0.0 -arch amd64 -bin ./myapp -verbose
+.SH FILES
+.TP
+\fB/usr/local/bin/debforge\fR
+Main executable
+.TP
+\fB/usr/share/debforge/build-deb.sh\fR
+Main script file
+.SH AUTHOR
+Written by Nishant <ndjangra1027@email.com>
+.SH SEE ALSO
+\fBdpkg-deb\fR(1), \fBdpkg\fR(1)
+.SH BUGS
+Report bugs to https://github.com/nishujangra/debforge/issues

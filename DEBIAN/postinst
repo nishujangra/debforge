@@ -1,0 +1,25 @@
+#!/bin/bash
+
+set -e
+
+# Create symlink to make debforge available as a command
+if [ ! -L /usr/local/bin/debforge ]; then
+    ln -sf /usr/share/debforge/build-deb.sh /usr/local/bin/debforge
+    echo "debforge command installed successfully"
+fi
+
+# Create man page directory and install man page
+if [ ! -d /usr/local/share/man/man1 ]; then
+    mkdir -p /usr/local/share/man/man1
+fi
+
+# Update man database if mandb is available
+if command -v mandb >/dev/null 2>&1; then
+    mandb -q
+fi
+
+echo "debforge package installed successfully!"
+echo "Usage: debforge -name <pkg_name> -version <version> -arch <arch> -bin <binary_path>"
+echo "Run 'debforge --help' for more information."
+
+exit 0

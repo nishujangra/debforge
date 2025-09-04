@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -e
+
+# Remove the symlink
+if [ -L /usr/local/bin/debforge ]; then
+    rm -f /usr/local/bin/debforge
+    echo "debforge command removed"
+fi
+
+exit 0
