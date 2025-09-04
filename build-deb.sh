@@ -10,15 +10,26 @@ readonly BLUE='\033[0;34m'
 readonly BOLD='\033[1m'
 readonly NC='\033[0m' # No Color
 
-log()   { echo -e "${GREEN}[$(date '+%Y-%m-%d %H:%M:%S')] [LOG]: $1${NC}"; }
-warn()  { echo -e "${YELLOW}[$(date '+%Y-%m-%d %H:%M:%S')] [WARNING]: $1${NC}"; }
-error() { echo -e "${RED}[$(date '+%Y-%m-%d %H:%M:%S')] [ERROR]: $1${NC}"; }
-info()  { echo -e "${BLUE}[$(date '+%Y-%m-%d %H:%M:%S')] [INFO]: $1${NC}"; }
-section(){ echo -e "\n${BOLD}${BLUE}===== $* =====${NC}\n" >&2; }
+log(){ 
+    echo -e "${GREEN}[$(date '+%Y-%m-%d %H:%M:%S')] [LOG]: $1${NC}"; 
+}
+warn(){ 
+    echo -e "${YELLOW}[$(date '+%Y-%m-%d %H:%M:%S')] [WARNING]: $1${NC}"; 
+}
+error(){ 
+	echo -e "${RED}[$(date '+%Y-%m-%d %H:%M:%S')] [ERROR]: $1${NC}"; 
+}
+info(){ 
+	echo -e "${BLUE}[$(date '+%Y-%m-%d %H:%M:%S')] [INFO]: $1${NC}"; 
+}
+section(){ 
+	echo -e "\n${BOLD}${BLUE}===== $* =====${NC}\n" >&2; 
+}
 
 #======================================================================
 # Configuration
 #======================================================================
+# Default values
 PKG_NAME="myapp"
 PKG_VERSION="1.0.0"
 ARCH="amd64"
@@ -31,6 +42,7 @@ CLEANUP=true
 # Valid architectures
 VALID_ARCHS=("amd64" "arm64" "armhf" "i386" "all")
 
+# --help
 usage() {
     cat << EOF
 Usage: $0 -name <pkg_name> -version <version> -arch <arch> -bin <binary_path> [OPTIONS]

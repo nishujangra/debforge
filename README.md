@@ -111,20 +111,6 @@ balancerx_1.0.0_amd64.deb
 
 ---
 
-## 📌 Roadmap
-
-* [x] Input validation and error handling
-* [x] Verbose mode for debugging
-* [x] Configurable maintainer information
-* [x] Complete man page documentation
-* [x] .deb package distribution
-* [ ] Generate `systemd` service files
-* [ ] GPG signing for repo publishing
-* [ ] Multi-arch build helpers
-* [ ] Support for desktop files and icons
-
----
-
 ## 📜 License
 
 MIT License.
