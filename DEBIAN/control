@@ -5,7 +5,7 @@ Priority: optional
 Architecture: all
 Depends: dpkg-dev, bash (>= 4.0)
 Recommends: gcc, build-essential
-Maintainer: Nishant <ndjangra1027@email.com>
+Maintainer: Nishant <ndjangra1027@gmail.com>
 Homepage: https://github.com/nishujangra/debforge
 Description: debforge - friendly .deb package builder
  A simple, user-friendly tool to create .deb packages from binaries.
