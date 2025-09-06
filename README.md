@@ -104,4 +104,4 @@ balancerx_1.0.0_amd64.deb
 
 ## 📜 License
 
-MIT License.
+Apache 2.0 License -> [License](./LICENSE.md)
