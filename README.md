@@ -30,10 +30,10 @@ Download the latest release and install:
 
 ```sh
 # Download the .deb package from releases
-wget https://github.com/nishujangra/debforge/releases/latest/download/debforge_1.0.0_all.deb
+wget https://github.com/nishujangra/debforge/releases/latest/download/debforge_1.0.0.deb
 
 # Install the package
-sudo dpkg -i debforge_1.0.0_all.deb
+sudo dpkg -i debforge_1.0.0.deb
 
 # Install dependencies if needed
 sudo apt-get install -f
@@ -46,7 +46,7 @@ git clone https://github.com/nishujangra/debforge.git
 cd debforge
 chmod +x build-debforge.sh
 ./build-debforge.sh
-sudo dpkg -i debforge_1.0.0_all.deb
+sudo dpkg -i debforge_1.0.0.deb
 ```
 
 ### Verify Installation

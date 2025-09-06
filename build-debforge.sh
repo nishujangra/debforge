@@ -49,7 +49,7 @@ cp DEBIAN/prerm "${BUILD_DIR}/DEBIAN/"
 cp DEBIAN/postrm "${BUILD_DIR}/DEBIAN/"
 
 # Build the package
-OUTPUT="debforge_1.0.0_all.deb"
+OUTPUT="debforge_1.0.0.deb"
 info "Building .deb package: ${OUTPUT}"
 
 if ! dpkg-deb --build "${BUILD_DIR}" "${OUTPUT}"; then
